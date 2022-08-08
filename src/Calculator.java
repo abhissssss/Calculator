@@ -14,20 +14,22 @@ public class Calculator {
         while (!quit) {
             printActions();
             int pressKey = scanner.nextInt();
-            System.out.println("Enter two numbers : ");
-            int x = scanner.nextInt();
-            int y = scanner.nextInt();
-            switch (pressKey) {
-                case 0 -> {
-                    System.out.println("Switch off calculator");
-                    quit = true;
-                }
-                case 1 -> System.out.println("The answer is -> " + addition(x, y));
-                case 2 -> System.out.println("The answer is -> " + subtraction(x, y));
-                case 3 -> System.out.println("The answer is -> " + division(x, y));
-                case 4 -> System.out.println("The answer is -> " + multiplication(x, y));
-                default -> System.out.println("No such option exists");
+            if(pressKey==0){
+                quit=true;
+                System.out.println("Switch off calculator");
+            }
+            else {
+                System.out.println("Enter two numbers : ");
+                int x = scanner.nextInt();
+                int y = scanner.nextInt();
+                switch (pressKey) {
+                    case 1 -> System.out.println("The answer is -> " + addition(x, y));
+                    case 2 -> System.out.println("The answer is -> " + subtraction(x, y));
+                    case 3 -> System.out.println("The answer is -> " + division(x, y));
+                    case 4 -> System.out.println("The answer is -> " + multiplication(x, y));
+                    default -> System.out.println("No such option exists");
 
+                }
             }
         }
 
