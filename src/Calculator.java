@@ -8,11 +8,12 @@ public class Calculator {
     public static void main(String[] args) {
         boolean quit = false;
         startCalculator();
-        printActions();
-        int pressKey = scanner.nextInt();
+
 
 
         while (!quit) {
+            printActions();
+            int pressKey = scanner.nextInt();
             System.out.println("Enter two numbers : ");
             int x = scanner.nextInt();
             int y = scanner.nextInt();
